@@ -1,22 +1,21 @@
-public class MailMessage {
-    // implement here
-    private String to, from, content;
+public class MailMessage extends Mail<String> {
 
-    public MailMessage(String from, String to, String content) {
-        this.to = to;
-        this.from = from;
-        this.content = content;
+    public MailMessage(String to, String from, String content) {
+        super(from, to, content);
     }
 
+    @Override
     public String getTo() {
-        return to;
+        return super.getTo();
     }
 
+    @Override
     public String getFrom() {
-        return from;
+        return super.getFrom();
     }
 
+    @Override
     public String getContent() {
-        return content;
+        return super.getContent();
     }
 }
